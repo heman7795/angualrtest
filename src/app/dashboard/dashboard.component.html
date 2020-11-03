@@ -1,0 +1,27 @@
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+        </ol>
+      </nav>
+    <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile no</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of employee ">
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.mobileno}}</td>
+                <td><button type="button" class="btn btn-info" (click)="viewProfile(i)">View Profile</button></td>
+              </tr>
+           
+            </tbody>
+          </table>
+    </div>
+</div>
